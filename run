@@ -5,7 +5,28 @@ set -e
 mkdir -p /opt/repos
 
 if [ -n "$GITHUB_TOKEN" ] ; then
-    echo "spaarti: $GITHUB_TOKEN" > /root/.octoauth.yml
+    cat > /root/.octoauth.yml <<EOF
+spaarti: $GITHUB_TOKEN
+Prospectus: $GITHUB_TOKEN
+EOF
 fi
+
+if [ -n "$GITLAB_TOKEN" ] ; then
+    cat > /root/.github_api <<EOF
+$GITLAB_TOKEN
+EOF
+fi
+
+
+if [ -n "$GEMNASIUM_TOKEN" ] ; then
+    cat > /root/.netrc <<EOF
+machine gemnasium.com
+  login X
+  password $GEMNASIUM_TOKEN
+EOF
+    chmod 600 /root/.netrc
+fi
+
 spaarti -q
 (cd /opt/repos && /opt/repos/akerl/scripts/repo_sync)
+
