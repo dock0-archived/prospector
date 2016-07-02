@@ -1,0 +1,9 @@
+---
+auth_file: /root/.octoauth.yml
+base_path: /opt/repos
+purge: true
+url_type: clone
+exclude:
+  full_name:
+    - ^p
+    - akerl/ranger

@@ -1,0 +1,11 @@
+#!/bin/sh
+
+set -e
+
+mkdir -p /opt/repos
+
+if [ -n "$GITHUB_TOKEN" ] ; then
+    echo "spaarti: $GITHUB_TOKEN" > /root/.octoauth.yml
+fi
+spaarti -q
+(cd /opt/repos && /opt/repos/akerl/scripts/repo_sync)
