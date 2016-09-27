@@ -2,7 +2,7 @@ dock0/prospector
 =======
 
 [![Automated Build](http://img.shields.io/badge/automated-build-green.svg)](https://hub.docker.com/r/dock0/prospector/)
-[![Build Status](https://img.shields.io/circleci/project/dock0/prospector.svg)](https://circleci.com/gh/dock0/prospector)
+[![Build Status](https://img.shields.io/circleci/project/dock0/prospector/master.svg)](https://circleci.com/gh/dock0/prospector)
 [![MIT Licensed](http://img.shields.io/badge/license-MIT-green.svg)](https://tldrlegal.com/license/mit-license)
 
 Container for running [prospectus](https://github.com/akerl/prospectus)
