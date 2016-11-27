@@ -1,3 +1,5 @@
+**Inactive Project:** I'm porting my services to run within the AWS ecosystem, so this idea is likely being developed as a Lambda instead of container
+
 dock0/prospector
 =======
 
